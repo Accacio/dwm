@@ -61,7 +61,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "x-terminal-emulator", NULL };
 static const char *druncmd[]  = { "drun", NULL };
 static const char *runcmd[]  = { "run", NULL };
-static const char *lockcmd[]  = { "i3lock -c 2e3440", NULL };
+static const char *lockcmd[]  = { "i3lock", "-c", "2e3440", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
