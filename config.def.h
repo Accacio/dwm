@@ -61,12 +61,14 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "x-terminal-emulator", NULL };
 static const char *druncmd[]  = { "drun", NULL };
 static const char *runcmd[]  = { "run", NULL };
+static const char *lockcmd[]  = { "i3lock -c 2e3440", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_r,         spawn,          {.v = druncmd } },
 	{ MODKEY,                       XK_p,         spawn,          {.v = runcmd } },
 	{ MODKEY|ShiftMask,             XK_Return,    spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_Escape,    spawn,          {.v = lockcmd } },
 	{ MODKEY,                       XK_b,         togglebar,      {0} },
 	{ MODKEY,                       XK_j,         focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,         focusstack,     {.i = -1 } },
